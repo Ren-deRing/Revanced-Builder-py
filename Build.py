@@ -3,8 +3,6 @@ from Util import EasyJSON
 import googletrans, zipfile, os, psutil, sys, time
 from win32com.shell import shell
 
-ver = 1.0
-
 translator = googletrans.Translator()
 mem = dict(psutil.virtual_memory()._asdict())
 patches = []
@@ -18,11 +16,15 @@ if not shell.IsUserAnAdmin() :
     exit(0)
 
 print("[ UPDATE ] 업데이트 체크 중입니다...")
-downloader.file('https://github.com/Ren-deRing/Revanced-Builder-py/releases/latest/download/ver.txt', './ver.txt')
+downloader.file('https://github.com/Ren-deRing/Revanced-Builder-py/releases/latest/download/ver.txt', './Util/ver.txt')
 
-with open('ver.txt', 'r') as f:
+with open('./ver.txt', 'r') as fs:
 
-    if str(f.read) != str(ver):
+    ver = fs.read()
+
+with open('./Util/ver.txt', 'r') as f:
+
+    if str(f.read()) != str(ver):
 
         os.system("del url.json")
         downloader.file('https://github.com/Ren-deRing/Revanced-Builder-py/releases/latest/download/url.json', './url.json')

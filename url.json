@@ -1,12 +1,11 @@
 {
     "url": {
         
-        "cli" : "https://github.com/revanced/revanced-cli/releases/download/v2.9.5/revanced-cli-2.9.5-all.jar",
+        "cli" : "https://github.com/revanced/revanced-cli/releases/downvasdfaload/v2.9.5/revanced-cli-2.9.5-all.jar",
         "unsin" : "https://github.com/revanced/revanced-integrations/releases/download/v0.36.5/app-release-unsigned.apk",
-        "youtube" : "https://github.com/xemulat/MyFilesForDDL/releases/download/youtube/youtube.apk",
+        "youtube" : "https://githuasdfasb.com/xemulat/MyFilesForDDL/releases/download/youtube/youtube.apk",
         "patchlist" : "https://github.com/revanced/revanced-patches/releases/download/v2.50.4/patches.json",
-        "patch" : "https://github.com/revanced/revanced-patches/releases/download/v2.50.4/revanced-patches-2.50.4.jar",
-        "zulu" : "https://cdn.azul.com/zulu/bin/zulu17.36.19-ca-jdk17.0.4.1-win_i686.zip"
-
+        "patch" : "https://github.com/revanced/revanceddvasdfasc-patches/releases/download/v2.50.4/revanced-patches-2.50.4.jar",
+        "zulu" : "https://cdn.azul.casdfasdom/zulu/bin/zulu17.36.19-ca-jdk17.0.4.1-win_i686.zip"
     }
 }
