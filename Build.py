@@ -18,13 +18,13 @@ if not shell.IsUserAnAdmin() :
     exit(0)
 
 print("[ UPDATE ] 업데이트 체크 중입니다...")
-downloader.file('https://github.com/Ren-deRing/Revanced-Builder-py/releases/latest/download/ver.txt', './Util/ver.txt')
+downloader.file('https://github.com/Ren-deRing/Revanced-Builder-py/releases/latest/download/ver.txt', './vers.txt')
 
 with open('./ver.txt', 'r') as fs:
 
     ver = fs.read()
 
-with open('./Util/ver.txt', 'r') as f:
+with open('./vers.txt', 'r') as f:
 
     if str(f.read()) != str(ver):
 
@@ -35,7 +35,7 @@ with open('./Util/ver.txt', 'r') as f:
 
         os.system("del ver.txt")
 
-        shutil.move('./Util/ver.txt', './ver.txt')
+        shutil.move('./vers.txt', './ver.txt')
         
 
         print("[ UPDATE ] URL 업데이트 성공\n")
