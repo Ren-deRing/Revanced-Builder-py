@@ -1,10 +1,12 @@
+from fnmatch import translate
 from Util import downloader
 from Util import EasyJSON
-import googletrans, zipfile, os, psutil, sys, time
+import zipfile, os, sys, time, shutil
+from trans import client
 from win32com.shell import shell
 
-translator = googletrans.Translator()
-mem = dict(psutil.virtual_memory()._asdict())
+translator = client.Translator()
+
 patches = []
 
 print("\n\n\n\n\n\n\nRevanced Builder")
@@ -28,6 +30,13 @@ with open('./Util/ver.txt', 'r') as f:
 
         os.system("del url.json")
         downloader.file('https://github.com/Ren-deRing/Revanced-Builder-py/releases/latest/download/url.json', './url.json')
+
+        f.close()
+
+        os.system("del ver.txt")
+
+        shutil.move('./Util/ver.txt', './ver.txt')
+        
 
         print("[ UPDATE ] URL 업데이트 성공\n")
 
@@ -66,10 +75,10 @@ for i in js:
     if i['compatiblePackages'][0]['name'] == 'com.google.android.youtube':
 
         res.append(i['name'])
-        result = translator.translate(str(i['description']), dest='ko')
+        result = result = translator.translate(text=str(i['description']), src='en', dest='ko')
         print(i['name'] + "         - " + result.text)
 
-        if i['excluded'] == True or i['name'] == 'setting' or i['name'] == 'video-ads' or i['name'] == 'general-ads':
+        if i['excluded'] == True or i['name'] == 'setting' or i['name'] == 'video-ads' or i['name'] == 'general-ads' or i['name'] == 'custom-branding':
 
             patches.append(i['name'])
 
